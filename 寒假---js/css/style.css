@@ -1,0 +1,135 @@
+header{
+	position: relative;
+}
+header img.logo{
+	float: left;
+	/*margin-left: 410px;*/
+	margin-right: 147px;
+}
+header ul.ul1{
+
+}
+header ul.ul1 li{
+	float: left;
+	width: 90px;
+	line-height: 96px;
+	background-color: #f5f3f2;
+}
+header ul.ul1 li a{
+	color: #1a1b18; 
+	font-size: 13px;
+	text-align: center;
+	display: block;
+	height: 96px;
+}
+header ul.ul1 li a:hover{
+	background-color: #ff0000;
+	color: #ffffff;
+}
+header .wrap{
+	width: 1100px;
+	margin: 0 auto;
+	background-color: #f8f7f7;
+}
+header div.bulid{
+	width: 1920px;
+	height: 430px;
+	background: url(../img/bulid.jpg) no-repeat 
+	center center;
+}
+header ul.ul2{
+	background-color: #5c3a3d;
+	position: absolute;
+	top: 96px;
+	right: 0;
+	padding-right: 384px;
+	display: none;
+}
+header ul.ul2 li{
+	float: left;
+	width: 92px;
+	line-height: 60px;
+	text-align: center;
+}
+header ul.ul2 li a{
+	color: #ffffff;
+	font-size: 13px;
+}
+main{
+	width: 1100px;
+	margin: 0 auto;
+}
+main img.sell{
+	margin: 19px auto;
+}
+main div.wechat{
+	width: 277px;
+	padding: 8px;
+	border: 1px solid #d9d9d9;
+	background-color: #f2f2f2;
+	float: left;
+}
+main div.wechat img{
+	width: 129px;
+	height: 129px;
+	border: 1px solid #d9d9d9;
+	float: left;
+}
+main div.wechat p{
+	text-align: center;
+	margin-top:45px;
+	font-size: 14px;
+	color: #5c5c5c;
+}
+main h2{
+	font-size: 14px;
+	color: #373737;
+	line-height: 40px;
+}
+main h2 span{
+	color: #373737;
+	margin-left: 312px;
+}
+main .center{
+	float: left;
+	margin-left: 20px;
+}
+main .center ul li{
+	font-size: 12px;
+	color: #6a6a6a;
+	line-height: 25px;
+}
+main .center ul li span{
+	margin-left: 80px;
+	color: #6a6a6a;
+}
+main div.hov{
+	width: 332px;
+	height: 148px;
+	border: 1px solid #d9d9d9;
+	float: right;
+	padding-top: 112px;
+	background: url(../img/foot.jpg);
+}
+main div.hov p{
+	font-size: 14px;
+	background-color: rgba(198,12,13,0.7);
+	display: none;
+	color: #fdeded;
+	line-height: 35px;
+	text-align: center;
+}
+footer{
+	width: 1100px;
+	margin: 0 auto;
+	padding: 26px 0 58px 8px;
+}
+footer p{
+	line-height: 26px;
+	color: #a3a3a3;
+	font-size: 11px;
+}
+footer p span{
+	color: #a3a3a3;
+	margin-left:426px;
+}
