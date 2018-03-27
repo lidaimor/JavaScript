@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		input{ width: 300px; height: 30px; margin-bottom: 10px;}
+		input:nth-of-type(3){ width: 80px;}
+	</style>
+</head>
+<body>
+	<input type="text" value="Sat Mar 27 2018 19:30:00 GMT+0800" /><br/>
+	<input type="text"/>
+	<input type="button" value="开始倒计时" />
+<script>
+	var aInput=document.getElementsByTagName('input');
+	var timer=null;
+	aInput[2].onclick=function(){
+		clearInterval(timer);
+		var iNew =new Date(aInput[0].value);
+		// alert(iNew);
+		var iNow = new Date();
+		// alert(iNow);
+		var t = (iNew - iNow)/1000;
+		// alert(t);
+		if(t){	
+			timer=setInterval(function(){
+				// clearInterval(timer);
+				var iD = Math.floor(t/86400); //天
+			    var iH = Math.floor(t%86400/3600); //时
+			    var iM = Math.floor(t%3600/60); //分
+			    var iS = Math.floor(t%60); //秒
+			    var str="";
+			    str="距离现在还有："+iD +"天"+iH+"时"+iM+"分"+iS+"秒";
+			    aInput[1].value=str;
+					if(iD==0&&iH==0&&iM==0&&iS==0){
+						clearInterval(timer);
+					}else{
+			   			t--;
+					}
+				},1000);
+			}	
+		}
+</script>
+</body>
+</html>
