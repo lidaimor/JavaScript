@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+ 
+<body>
+<form name="form" action="" method="post" >
+<div>
+   <li><input type="checkbox" name="ys1">001</li>
+   <li><input type="checkbox" name="ys2">002</li>
+   <li><input type="checkbox" name="ys3">003</li>
+   <li><input type="checkbox" name="ys4">004</li>
+   <li><input type="checkbox" name="ys5">005</li>
+</div>
+<input type="submit" name="submit" value="投票"/>
+</form>
+<script>
+    var num=0;
+        // checks=[];
+        // [].push.apply(checks,document.getElementsByTagName('input'));
+        // console.log(checks);
+    function changeStatus(status,dom){
+        if(status){
+            dom.checked=false;
+            num--
+        }
+    }
+    document.forms[0].onclick=function(e){
+        var a=e||window.event;
+        var target=a.target||a.srcElement;
+        if(target.type=='checkbox'){
+            if(target.checked){
+                num++;
+            }else{
+                num--;
+            }
+            changeStatus(num>3,target);
+        }
+    }
+</script>
+</body>
+</html>
