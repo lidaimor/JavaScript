@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		ul{
+			list-style: none;
+			margin:0;
+			padding:0;
+			overflow: hidden;
+		}
+		ul:nth-child(1){
+			margin-bottom: 20px;
+		}
+		ul:nth-child(1) li{
+			float: left; width: 200px; height: 100px; border:1px solid #e6e6e6;background-color: snow; margin:0 10px;
+			color: gray; padding:5px; line-height: 25px;
+		}
+		ul:nth-child(2){
+			margin-left: 322px;
+		}
+		ul:nth-child(2) li{
+			width: 35px;height: 35px; float: left; margin:0 10px;border-radius: 50%;border:1px solid pink; background-color: #e6e6e6; cursor: pointer;text-align: center; line-height: 35px;
+		}
+	</style>
+</head>
+<body>
+	<ul></ul>	
+	<ul></ul>
+<script src="ajax.js"></script>
+<script>
+	var oDiv=document.getElementsByTagName('div')[0];
+	var oUl=document.getElementsByTagName('ul');
+		ajax("a.txt",function(str){
+			var arr=[];
+			arr=eval(str);
+			makeList(1,arr);
+			var n1=Math.ceil(arr.length/4);
+			// console.log(n1+','+n2);
+			for(var i=0;i<n1;i++){
+				var oLi=document.createElement('li');
+				oLi.innerHTML=i+1;
+				oLi.onclick=function(){
+					makeList(this.innerHTML,arr);
+				}
+				oUl[1].appendChild(oLi);
+			}
+		})
+		function makeList(num,arr){
+		oUl[0].innerHTML='';
+		for(var i=(num-1)*4;i<num*4&&i<arr.length;i++){
+			var oLi=document.createElement('li');
+			oLi.innerHTML="商品编号："+arr[i].id+"<br/>"+"商品名称："+arr[i].name+"<br/>"+"商品价格："+arr[i].price;
+			oUl[0].appendChild(oLi);
+		}
+	}
+	
+</script>
+</body>
+</html>
