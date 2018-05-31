@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		/**{margin: 0;padding: 0;}*/
+		body{margin:0; padding:0;}
+		.wrap{width: 400px; height: 300px; margin:0 auto; border: 1px solid #666; overflow: hidden; padding:0;}
+		ul{ list-style: none; overflow: hidden; padding: 0; margin: 0;}
+		ul li{float: left; width: 33.33%;height: 30px;text-align: center;line-height: 30px; background-color: #e6e6e6;}
+		li.active{background-color: #fff;}
+		.wrap div{ height: 200px; float: left; display: none;}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<ul>
+			<li class="active">选项一</li>
+			<li>选项二</li>
+			<li>选项三</li>
+		</ul>
+		<div style="display: block;">我是第一个选项框</div>
+		<div>我是第二个选项框</div>
+		<div>我是第三个选项框</div>
+	</div>
+	<script src="jquery.min.js"></script>
+	<script>
+		$("li").click(function(){
+			var i=$(this).index()+1;
+			// $(".wrap div").css("display","none");
+			// $("div").get(i).style.display="block";
+			$(".wrap div").eq($(this).index()).css("display","block").siblings("div").css("display","none");
+			// $("li").removeClass("active");
+			$(this).addClass("active").siblings().removeClass("active");
+		})
+	</script>
+</body>
+</html>

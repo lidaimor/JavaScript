@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		div{ width: 100px; height: 100px; }
+		div:nth-child(1){
+			background-color: red;
+		}
+	/*	div:nth-child(2){
+			background-color: yellow;
+		}
+		div:nth-child(3){
+			background-color: lightblue;
+		}*/
+	</style>
+</head>
+<body>
+	<div>div1</div>
+	<div style="background-color: yellow;">div2</div>
+	<div style="background-color: lightblue;">div3</div>
+	<script src="jquery.min.js"></script>
+	<script>
+		$("div").eq(0).mouseover(function(){
+			$("div").eq(2).insertBefore($("div").eq(1));
+		})
+		$("div").eq(0).mouseout(function(){
+			$("div").eq(2).insertBefore($("div").eq(1));
+		})
+	</script>
+</body>
+</html>

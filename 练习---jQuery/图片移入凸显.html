@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		body,img{margin:0; padding:0;}
+		body{ width: 800px;margin: 40px auto; }
+	</style>
+</head>
+<body>
+	<img src="img/1.png" width="195" height="239" />
+	<img src="img/2.png" width="195" height="239" />
+	<img src="img/3.png" width="195" height="239" />
+	<img src="img/4.png" width="195" height="239" />
+<script src="jquery.min.js"></script>
+<script>
+	$("img").hover(function(){
+		$(this).siblings().animate({opacity:0.5},500,'linear');
+	},function(){
+		$("img").css("opacity","1");
+	})
+</script>
+</body>
+</html>

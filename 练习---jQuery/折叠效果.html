@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		ul,li,body,h1,p{margin:0; padding:0;}
+		ul{ margin: 0 20px; }
+		li{list-style: none; width: 500px; text-align: center; margin-bottom: 10px;}
+		li h1{ border:1px solid lavender; background-color: #e6e6e6; border-radius: 5px; font-size: 24px; line-height: 35px; color: olive;}
+		li p{ overflow: hidden; font-size: 14px; line-height: 20px; text-align: left; background-color: snow;
+   			 color: yellowgreen; border-radius: 10px;  }
+	</style>
+</head>
+<body>
+	<ul>
+		<li>
+			<h1>标题一</h1>
+			<p>当人生的路口分叉的时候，我走了另外一条路，或许这条路不适合我，或许它压根就是一个错误，可不管怎样，我在这条路上，看到了不同的风景。14年高考结束以后，我们就像一群被解禁的鸟，迫不及待的想要找到自己的归属地，只不过，</p>
+		</li>
+		<li>
+			<h1>标题二</h1>
+			<p>有些人选择飞到了花香四溢的地方，我却选择飞往了偏僻的丛林。当他们一个个都在旅游，都在空间晒照片的时候，我在深深地庭院里，听着那隆隆的机器声，拿着那滚烫滚烫的烙铁。一个人，没有羡慕，没有抱怨，只是把日子过得平平淡淡。</p>
+		</li>
+		<li>
+			<h1>标题三</h1>
+			<p>来一场说走就走的旅行，不求任何人陪同，但求看遍人世间风景。没想到，这趟旅行来的太突然，太平淡，太久远。开学的时候，俺爸说送我到学校，我百般推辞后，依旧拗不过他，我就郑重其事的答应了。</p>
+		</li>
+	</ul>
+<script src="jquery.min.js"></script>
+<script>
+	// for(var i=0;i<$("p").length;i++){
+	// 	$("p")[i].height = $("p")[i].offsetHeight;
+	// 	$("p")[i].style.height='0';
+	// }
+	// $("p")[0].style.height=$("p")[0].height+"px";
+	var bOn=true;
+	/*$("h1").on("click",function(){
+		$("p").css("display","none");
+		$("p").eq($(this).parent().index()).css("display",bOn==true?"block":"none");
+		bOn=!bOn;
+		// $("p")[$("this").parent().index()).height+"px"]
+	})*/
+	for(var i=0;i<$("p").length;i++){
+		$("p")[i].height=$("p")[i].offsetHeight;
+		$("p")[i].style.height="0";
+	}
+	$("p")[0].style.height=$("p")[0].height+"px";
+	$("h1").on("click",function(){
+		$("p").eq($(this).parent().index()).animate({"height":($("p")[$(this).parent().index()].offsetHeight==0 ? $("p")[$(this).parent().index()].height+"px" : 0)},400,"linear").parent().siblings().find("p").animate({"height":"0"},400,'linear');
+	})
+</script>
+</body>
+</html>

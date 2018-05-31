@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		body,div{ margin: 0;padding: 0; }
+		div{ width: 100px; height: 100px; background-color: lightblue; position: absolute; left: 100px;top: 100px;}
+	</style>
+</head>
+<body>
+	<div></div>
+	<script src="jquery.min.js"></script>
+	<script>
+		setInterval(function(){
+			$(document).keydown(function(ev){
+				if(ev.which == 37){ 
+	            	var iL=$("div").offset().left-5+"px";
+	            	$("div").css("left",iL);
+	        	}else if (ev.which == 38) { 
+	        		var iT=$("div").offset().top-5+"px";
+	            	$("div").css("top",iT);
+	        	}else if (ev.which == 39) { 
+	            	var iR=$("div").offset().left+5+"px";
+	            	$("div").css("left",iR);
+	        	}else if (ev.which == 40) { 
+	            	var iB=$("div").offset().top+5+"px";
+	            	$("div").css("top",iB);  
+	        	}
+			})
+		},500);
+		
+		// $("div").
+	</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		div,body,img{margin: 0; padding:0;}
+		.wrap{ width: 400px; height: 240px; position: relative; overflow: hidden; margin: 100px auto;}
+		div.mo{ overflow: hidden; position: absolute; left: 0; top: 0;}
+		img{display: block; float: left;}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="mo">
+			<img src="img/1.png" width="200" height="240" />
+			<img src="img/2.png" width="200" height="240" />
+			<img src="img/3.png" width="200" height="240" />
+			<img src="img/4.png" width="200" height="240" />
+		</div>
+	</div>
+<script src="jquery.min.js"></script>
+<script type="text/javascript">
+	$(".mo").html($(".mo").html()+$(".mo").html()).css("width",$("img").length*$("img").outerWidth()+"px");
+	var timer=null;
+	timer=setInterval(move,30);
+	function move(){
+		$(".mo").css("left",($(".mo").position().left-5 <=-$(".mo").outerWidth()/2 ? 0 : $(".mo").position().left-5 +"px"));
+	}
+	$(".mo").hover(function(){
+		clearInterval(timer);
+	},function(){
+		timer=setInterval(move,30);
+	})
+	// var i=2;
+	// var j=3;
+	// timer=setInterval(function(){
+	// 	if(i==4||j==4){
+	// 		i=1;
+	// 		j=2;
+	// 	}
+	// 	$("img")[0].src="img/"+i%4+".png";
+	// 	$("img")[1].src="img/"+j%4+".png";
+	// 	i++;j++;
+	// },1000);
+</script>
+</body>
+</html>
