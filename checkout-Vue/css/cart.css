@@ -1,0 +1,143 @@
+body{
+    padding: 20px 0px;
+}
+header{
+    margin: 30px auto;
+    margin-left: 30px;
+}
+header .line{
+    width: 45%;
+    height: 1px;
+    background-color: lightgrey;
+    float: left;
+}
+header .tit{
+    display: block;
+    float: left;
+    margin: 0px 15px;
+    margin-top: -10px;
+    font-size: 20px;
+    color: #616161;
+    font-weight: bold;
+}
+main{
+    width: 85%;
+    margin: 0 auto;
+    position: relative;
+}
+main .detail{
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid lightgrey;
+}
+main .list{
+    text-align: center;
+    font-size: 15px;
+    background-color: #616161;
+    color: #f4f4f4;
+    line-height: 40px;
+    border-radius: 5px;
+    margin: 15px 0;
+}
+main .product img{
+    margin: 0 15px;
+    padding: 1px;
+    border: 1px solid gray;
+}
+main .product span{
+    color: darkgoldenrod;
+}
+main .money{
+    text-align: center;
+    line-height: 80px;
+}
+main .num{
+    padding-left: 87px;
+    margin-top: 30px;
+}
+main .num button{
+    width: 30px;
+    height: 25px;
+}
+main .num input{
+    width: 60px;
+    text-align: center;
+}
+main .all span{
+    display: block;
+    line-height: 80px;
+    margin: 0 auto;
+    padding-left: 65px;
+    color: #d2434a;
+}
+main .del img{
+    display: block;
+    margin: 30px auto;
+    cursor: pointer;
+}
+main .pick{
+    margin-right: 15px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+main .pay{
+    display: inline-block;
+    float: right;
+    background-color: #d2434a;
+    color: #ffe5e2;
+    width: 150px;
+    height: 50px;
+    border: none;
+    transition: all 0.3s ease-out;
+    font-size: 18px;
+    letter-spacing: 4px;
+    text-align: center;
+    line-height: 50px;
+}
+main .pay:hover{
+    background-color: #ffe5e2;
+    color: #d2434a;
+    border: 1px solid #d2434a;
+}
+main .round{
+    width: 20px;
+    height: 20px;
+    border: 1px solid gray;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    background-size: 100%;
+}
+main .checked{
+    width: 20px;
+    height: 20px;
+    background: url("../img/d2.png");
+    background-size: 100%;
+    border: none;
+}
+a{
+    text-decoration: none;
+    font-size: 16px;
+}
+a:hover{
+    text-decoration: none;
+}
+a:link{
+    text-decoration: none;
+}
+a:visited{
+    text-decoration: none;
+}
+a:active{
+    text-decoration: none;
+}
+main .item_total{
+    position: absolute;
+    bottom: -20px;
+    right: 300px;
+    font-size: 18px;
+    color: #666;
+}
+main .item_total span{
+    color: orangered;
+}
